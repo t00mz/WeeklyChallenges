@@ -17,14 +17,6 @@ namespace ChallengesWithTestsMark8
         {
             // throw new NotImplementedException();
 
-            //if (numbers == null || numbers.Count() == 0) { return false; }
-
-            //var sum = numbers.Sum();
-
-            //return sum % 2 != 0;
-
-            // -------------OR -----------------
-
             return (numbers == null) ? false : (numbers.Where(x => x % 2 != 0).Sum() % 2 != 0);
 
             // ----------- OR -------------------

@@ -53,14 +53,13 @@ namespace ChallengesWithTestsMark8
             return number % 2 == 0;
         }
 
-        public bool IsNumberOdd(int num) => (num % 2 != 0);
-
-            // using LAMBDA makes the method a 1 liner, with no scope
-        
-           // throw new NotImplementedException();
+        public bool IsNumberOdd(int num) => (num % 2 != 0); // using LAMBDA makes the method a 1 liner, with no scope
 
         // {
-            // return num % 2 != 0;
+        
+        // throw new NotImplementedException();
+
+        // return num % 2 != 0;
         // }
 
         public double SumOfMinAndMax(IEnumerable<double> numbers) // done

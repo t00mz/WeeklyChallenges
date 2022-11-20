@@ -10,14 +10,27 @@ namespace ChallengesWithTestsMark8
             throw new NotImplementedException();
         }
 
-        public void ChangeNamesOfBusinessesWithNoRevenueTo_CLOSED(Business[] businesses)
+        public void ChangeNamesOfBusinessesWithNoRevenueTo_CLOSED(Business[] businesses) // done
         {
-            throw new NotImplementedException();
+            // throw new NotImplementedException();
+
+            foreach (var busi in businesses)
+            {
+                if(busi.TotalRevenue == 0) { busi.Name = "CLOSED"; }
+            }
         }
 
-        public bool IsAscendingOrder(int[] numbers)
+        public bool IsAscendingOrder(int[] numbers) // done
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+
+            if (numbers == null || numbers.Length == 0) { return false; }
+
+            for (int i = 1; i < numbers.Length; i++)
+            {
+                if(numbers[i - 1] > numbers[i]) { return false; }
+            }
+            return true;
         }
 
         public int SumElementsThatFollowAnEven(int[] numbers)
@@ -32,7 +45,16 @@ namespace ChallengesWithTestsMark8
 
         public double[] GetEveryFourthElement(List<double> elements)
         {
-            throw new NotImplementedException();
+             throw new NotImplementedException();
+
+            List<double> sumList = new List<double>();
+
+            for (int i = 0; i < elements.Count; i+=4)
+            {
+                elements.Add(elements[i]);
+            }
+
+            return sumList.ToArray();
         }
 
         public bool TwoDifferentElementsInArrayCanSumToTargetNumber(int[] nums, int targetNumber)
